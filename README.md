@@ -1,21 +1,21 @@
-# 🌍 Nômade Turismo
+#  Nômade Turismo
 
 Bem-vindo ao **Nômade Turismo** - Sua plataforma definitiva para explorar o mundo e descobrir destinos incríveis!
 
-## 📋 Sobre o Projeto
+##  Sobre o Projeto
 
 **Nômade Turismo** é um site moderno e responsivo dedicado a apresentar destinos turísticos exclusivos ao redor do mundo. Com design elegante e interface intuitiva, a plataforma oferece uma experiência imersiva para viajantes que buscam aventuras inesquecíveis.
 
-### ✨ Características Principais
+###  Características Principais
 
-- 🎨 **Design Responsivo** - Funciona perfeitamente em desktop, tablet e mobile
-- ⚡ **Performance Otimizada** - Carregamento rápido e suave
-- 🧭 **Navegação Intuitiva** - Menu mobile com animações fluidas
-- 📱 **Mobile-First** - Desenvolvido com foco em dispositivos móveis
-- ♿ **Acessibilidade** - Estrutura semântica HTML5 e SEO otimizado
-- 🎯 **Clean Code** - Código limpo, bem organizado e fácil de manter
+-  **Design Responsivo** - Funciona perfeitamente em desktop, tablet e mobile
+-  **Performance Otimizada** - Carregamento rápido e suave
+-  **Navegação Intuitiva** - Menu mobile com animações fluidas
+-  **Mobile-First** - Desenvolvido com foco em dispositivos móveis
+-  **Acessibilidade** - Estrutura semântica HTML5 e SEO otimizado
+-  **Clean Code** - Código limpo, bem organizado e fácil de manter
 
-## 🏗️ Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 nomade-turismo/
@@ -31,27 +31,27 @@ nomade-turismo/
     └── destino3.jpg     # Machu Picchu
 ```
 
-## 🎨 Paleta de Cores
+##  Paleta de Cores
 
 - **Primária**: `#d4a373` - Tom terroso/bege (Nômade)
 - **Escura**: `#1a1a1a` - Preto profundo
 - **Clara**: `#fefae0` - Bege claro
 - **Branco**: `#ffffff` - Branco puro
 
-## 🚀 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **HTML5** - Markup semântico
 - **CSS3** - Flexbox, CSS Grid, Media Queries
 - **JavaScript (Vanilla)** - Menu responsivo e interatividade
 - **Font Awesome 6** - Ícones modernos
 
-## 📱 Responsividade
+##  Responsividade
 
 O site utiliza **mobile-first approach** com breakpoints:
-- 📱 Mobile: até 768px
-- 💻 Desktop: 768px+
+-  Mobile: até 768px
+-  Desktop: 768px+
 
-## ⚙️ Funcionalidades JavaScript
+##  Funcionalidades JavaScript
 
 ### Menu Mobile
 - Toggle de menu com clique no ícone hamburger
@@ -63,12 +63,7 @@ O site utiliza **mobile-first approach** com breakpoints:
 - Navegação âncora com scroll smooth
 - Transição elegante entre seções
 
-## 🛠️ Como Usar
-
-1. **Clone ou acesse o repositório:**
-   ```bash
-   git clone https://github.com/nobrecosta08/nobre.costa08.github.io.git
-   cd nobre.costa08.github.io/nomade-turismo
+## 
    ```
 
 2. **Abra no navegador:**
@@ -101,7 +96,7 @@ O site utiliza **mobile-first approach** com breakpoints:
 - Informações e botões "Saiba Mais"
 - Efeito hover elegante
 
-## 📝 Personalização
+##  Personalização
 
 ### Mudar Cores
 Edite as variáveis CSS em `css/style.css`:
@@ -127,14 +122,14 @@ Adicione novos cards no HTML:
 </div>
 ```
 
-## 🔍 SEO Otimizado
+##  SEO Otimizado
 
 - Meta tags descritivas
 - Estrutura semântica HTML5
 - Open Graph pronto para social sharing
 - Viewport configurado para mobile
 
-## 🎯 Próximas Melhorias
+##  Próximas Melhorias
 
 - [ ] Seção "Sobre Nós"
 - [ ] Formulário de contato funcional
@@ -144,18 +139,18 @@ Adicione novos cards no HTML:
 - [ ] Sistema de agendamento
 - [ ] Dark Mode
 
-## 📧 Contato
+##  Contato
 
 Para dúvidas ou sugestões sobre o projeto, entre em contato através de:
 - GitHub: [@nobrecosta08](https://github.com/nobrecosta08)
 - Email: nobre.costa08@email.com
 
-## 📄 Licença
+##  Licença
 
 Este projeto está disponível para uso pessoal e comercial.
 
 ---
 
-**Desenvolvido com ❤️ para viajantes do mundo**
+**Desenvolvido com  para viajantes do mundo**
 
 Feito por [Nobre Costa](https://github.com/nobrecosta08) | 2026
