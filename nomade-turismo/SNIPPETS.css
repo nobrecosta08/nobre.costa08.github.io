@@ -1,0 +1,543 @@
+/*
+╔════════════════════════════════════════════════════════════════════════════════╗
+║              SNIPPETS DE PERSONALIZAÇÃO - "INSTINTO NÔMADE"                    ║
+║         Copie e cole no HTML/CSS/JS conforme suas necessidades                ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+*/
+
+/* ═════════════════════════════════════════════════════════════════════════════ */
+/* 1️⃣ PERSONALIZAR CORES (colar em style.css) */
+/* ═════════════════════════════════════════════════════════════════════════════ */
+
+/*
+OPÇÃO A: Tons mais Verdes (floresta)
+────────────────────────────────────
+:root {
+    --color-primary: #2d5016;      Green forest
+    --color-accent: #4ade80;       Light green
+    --color-secondary: #1f3a0f;    Dark green
+}
+*/
+
+/*
+OPÇÃO B: Tons mais Vermelhos (fogo/calor)
+───────────────────────────────────────────
+:root {
+    --color-primary: #b45309;      Deep orange
+    --color-accent: #ff6b35;       Bright orange
+    --color-secondary: #8b3a0f;    Dark orange
+}
+*/
+
+/*
+OPÇÃO C: Tons mais Azuis (céu/água)
+────────────────────────────────────
+:root {
+    --color-primary: #0369a1;      Sky blue
+    --color-accent: #0ea5e9;       Bright blue
+    --color-secondary: #1e3a8a;    Dark blue
+}
+*/
+
+/* ═════════════════════════════════════════════════════════════════════════════ */
+/* 2️⃣ ADICIONAR PARALLAX NO HERO (adicionar em script.js) */
+/* ═════════════════════════════════════════════════════════════════════════════ */
+
+/*
+class HeroParallax {
+    constructor() {
+        this.hero = document.querySelector('.hero');
+        this.background = document.querySelector('.hero-background');
+        this.init();
+    }
+
+    init() {
+        window.addEventListener('scroll', () => this.handleParallax());
+    }
+
+    handleParallax() {
+        const scrollTop = window.pageYOffset;
+        if (this.background) {
+            const speed = 0.5;
+            this.background.style.transform = `translateY(${scrollTop * speed}px)`;
+        }
+    }
+}
+
+// Chamar no final do DOMContentLoaded:
+new HeroParallax();
+*/
+
+/* ═════════════════════════════════════════════════════════════════════════════ */
+/* 3️⃣ ADICIONAR CONTAGEM REGRESSIVA (para evento) */
+/* ═════════════════════════════════════════════════════════════════════════════ */
+
+/*
+HTML (adicionar em seção antes do footer):
+──────────────────────────────────────────
+<section class="countdown">
+    <div class="container">
+        <h2>Próxima Expedição</h2>
+        <div class="countdown-timer">
+            <div class="countdown-item">
+                <span id="days" class="countdown-value">0</span>
+                <p>Dias</p>
+            </div>
+            <div class="countdown-item">
+                <span id="hours" class="countdown-value">0</span>
+                <p>Horas</p>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes" class="countdown-value">0</span>
+                <p>Minutos</p>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds" class="countdown-value">0</span>
+                <p>Segundos</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+CSS (adicionar em style.css):
+─────────────────────────────
+.countdown {
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    padding: var(--spacing-2xl) 0;
+    text-align: center;
+}
+
+.countdown-timer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--spacing-2xl);
+    margin-top: var(--spacing-2xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.countdown-item {
+    background: var(--bg-tertiary);
+    padding: var(--spacing-xl);
+    border-radius: 8px;
+    border: 2px solid var(--color-primary);
+}
+
+.countdown-value {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+.countdown-item p {
+    margin: var(--spacing-sm) 0 0;
+    color: var(--text-secondary);
+}
+
+JavaScript (adicionar em script.js):
+────────────────────────────────────
+class Countdown {
+    constructor(targetDate) {
+        this.targetDate = new Date(targetDate).getTime();
+        this.init();
+    }
+
+    init() {
+        this.updateCountdown();
+        setInterval(() => this.updateCountdown(), 1000);
+    }
+
+    updateCountdown() {
+        const now = new Date().getTime();
+        const distance = this.targetDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        if (document.getElementById('days')) {
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+    }
+}
+
+// Chamar com data de evento:
+// new Countdown('2026-06-15T10:00:00');
+*/
+
+/* ═════════════════════════════════════════════════════════════════════════════ */
+/* 4️⃣ ADICIONAR FILTRO DE GALERIA */
+/* ═════════════════════════════════ */
+
+/*
+HTML (adicionar em seção nova):
+──────────────────────────────
+<section class="galeria">
+    <div class="container">
+        <h2 class="section-title">Galeria de Experiências</h2>
+        
+        <div class="galeria-filtros">
+            <button class="filtro-btn active" data-filtro="todos">Todos</button>
+            <button class="filtro-btn" data-filtro="rapel">Rapel</button>
+            <button class="filtro-btn" data-filtro="montanhismo">Montanhismo</button>
+            <button class="filtro-btn" data-filtro="survival">Survival</button>
+        </div>
+
+        <div class="galeria-grid">
+            <img src="img/rapel-1.jpg" alt="Rapel" class="galeria-item" data-categoria="rapel">
+            <img src="img/montanha-1.jpg" alt="Montanhismo" class="galeria-item" data-categoria="montanhismo">
+            <img src="img/survival-1.jpg" alt="Survival" class="galeria-item" data-categoria="survival">
+            <!-- Adicione mais conforme necessário -->
+        </div>
+    </div>
+</section>
+
+CSS:
+────
+.galeria-filtros {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-bottom: var(--spacing-2xl);
+    flex-wrap: wrap;
+}
+
+.filtro-btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border: 2px solid var(--color-primary);
+    background: transparent;
+    color: var(--color-primary);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filtro-btn.active {
+    background: var(--color-primary);
+    color: var(--bg-primary);
+}
+
+.filtro-btn:hover {
+    background: var(--color-primary);
+    color: var(--bg-primary);
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.galeria-item {
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    opacity: 1;
+}
+
+.galeria-item.hidden {
+    display: none;
+}
+
+.galeria-item:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+JavaScript:
+───────────
+class GaleriaFiltro {
+    constructor() {
+        this.btns = document.querySelectorAll('.filtro-btn');
+        this.items = document.querySelectorAll('.galeria-item');
+        this.init();
+    }
+
+    init() {
+        this.btns.forEach(btn => {
+            btn.addEventListener('click', (e) => this.filtrar(e.target.dataset.filtro));
+        });
+    }
+
+    filtrar(categoria) {
+        this.btns.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        this.items.forEach(item => {
+            if (categoria === 'todos' || item.dataset.categoria === categoria) {
+                item.classList.remove('hidden');
+            } else {
+                item.classList.add('hidden');
+            }
+        });
+    }
+}
+
+// Chamar:
+// new GaleriaFiltro();
+*/
+
+/* ═════════════════════════════════════════════════════════════════════════════ */
+/* 5️⃣ ADICIONAR TESTIMONIAL COM AVATAR */
+/* ═════════════════════════════════════ */
+
+/*
+HTML (substituir depoimento-card):
+──────────────────────────────────
+<div class="depoimento-card">
+    <img src="img/avatar-joao.jpg" alt="João Silva" class="depoimento-avatar">
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p class="depoimento-texto">
+        "Instinto Nômade transformou meu entendimento..."
+    </p>
+    <p class="depoimento-autor"><strong>João Silva</strong> | Empresário</p>
+</div>
+
+CSS:
+────
+.depoimento-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto var(--spacing-md);
+    border: 3px solid var(--color-primary);
+    object-fit: cover;
+}
+
+.depoimento-card {
+    text-align: center;
+}
+*/
+
+/* ═════════════════════════════════════════════════════════════════════════════ */
+/* 6️⃣ ADICIONAR NOTIFICAÇÃO POP-UP */
+/* ═════════════════════════════════ */
+
+/*
+JavaScript (adicionar em script.js):
+────────────────────────────────────
+class NotificationManager {
+    static show(message, type = 'info', duration = 3000) {
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.textContent = message;
+        notification.style.cssText = `
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            background-color: ${type === 'success' ? '#4ade80' : type === 'error' ? '#ef4444' : '#0ea5e9'};
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 9999;
+            animation: slideIn 300ms ease-out;
+        `;
+        
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.style.animation = 'slideOut 300ms ease-out';
+            setTimeout(() => notification.remove(), 300);
+        }, duration);
+    }
+}
+
+// Usar:
+// NotificationManager.show('Email enviado com sucesso!', 'success');
+// NotificationManager.show('Erro ao enviar', 'error');
+*/
+
+/* ═════════════════════════════════════════════════════════════════════════════ */
+/* 7️⃣ ADICIONAR LOADING SPINNER */
+/* ═════════════════════════════════ */
+
+/*
+CSS (adicionar em style.css):
+─────────────────────────────
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.spinner {
+    border: 4px solid var(--border-color);
+    border-top: 4px solid var(--color-accent);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+JavaScript:
+───────────
+// Mostrar spinner:
+const spinner = document.createElement('div');
+spinner.className = 'spinner';
+document.body.appendChild(spinner);
+
+// Remover:
+spinner.remove();
+*/
+
+/* ═════════════════════════════════════════════════════════════════════════════ */
+/* 8️⃣ ADICIONAR SCROLL-TO-TOP BUTTON */
+/* ═════════════════════════════════════ */
+
+/*
+HTML (adicionar antes de </body>):
+──────────────────────────────────
+<button id="scroll-to-top" class="scroll-to-top" title="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+CSS:
+────
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: var(--bg-primary);
+    border: none;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    z-index: 999;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-md);
+}
+
+.scroll-to-top.show {
+    display: flex;
+}
+
+.scroll-to-top:hover {
+    background: var(--color-accent);
+    transform: scale(1.1);
+}
+
+JavaScript:
+───────────
+class ScrollToTop {
+    constructor() {
+        this.btn = document.getElementById('scroll-to-top');
+        this.init();
+    }
+
+    init() {
+        if (this.btn) {
+            window.addEventListener('scroll', () => this.toggleVisibility());
+            this.btn.addEventListener('click', () => this.scrollTop());
+        }
+    }
+
+    toggleVisibility() {
+        if (window.pageYOffset > 300) {
+            this.btn.classList.add('show');
+        } else {
+            this.btn.classList.remove('show');
+        }
+    }
+
+    scrollTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
+// Chamar:
+// new ScrollToTop();
+*/
+
+/* ═════════════════════════════════════════════════════════════════════════════ */
+/* 9️⃣ TROCAR FONTE GLOBALMENTE */
+/* ═════════════════════════════════════ */
+
+/*
+Opção 1: Google Fonts (adicionar no <head> do HTML):
+─────────────────────────────────────────────────────
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+Atualizar em style.css:
+:root {
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+}
+
+Opção 2: Mudar apenas headings:
+──────────────────────────────
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.5px;
+}
+*/
+
+/* ═════════════════════════════════════════════════════════════════════════════ */
+/* 🔟 ADICIONAR WHATSAPP FLUTUANTE */
+/* ═════════════════════════════════════ */
+
+/*
+HTML (antes de </body>):
+──────────────────────
+<a href="https://wa.me/5511999999999" 
+   class="whatsapp-float" 
+   target="_blank"
+   title="Chat no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+CSS:
+────
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.75rem;
+    text-decoration: none;
+    z-index: 998;
+    box-shadow: var(--shadow-lg);
+    transition: all var(--transition-fast);
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background: #20ba5a;
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    50% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+}
+*/
+
+/* ═════════════════════════════════════════════════════════════════════════════ */
+/* FIM DOS SNIPPETS */
+/* ═════════════════════════════════════════════════════════════════════════════ */

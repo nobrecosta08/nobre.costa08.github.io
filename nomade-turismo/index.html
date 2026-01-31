@@ -1,73 +1,352 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nômade Turismo - Explore o Mundo</title>
+    <meta name="description" content="Instinto Nômade - Desenvolvimento de capacidade de sobrevivência, autoconhecimento e resiliência através de aventuras.">
+    <meta name="theme-color" content="#0d0d0d">
+    
+    <title>Instinto Nômade | Sobrevivencial radical.</title>
+    
+    <!-- FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Principal -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-    <header class="navbar">
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">Instinto<span>Nômade </span></a>
+            <!-- Logo -->
+            <a href="#inicio" class="logo">
+                <i class="fas fa-compass"></i>
+                <span>Instinto Nômade</span>
+            </a>
             
-            <nav class="nav-menu" id="nav-menu">
-                <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#destinos">Destinos</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#contato" class="btn-contato">Fale Conosco</a></li>
-                </ul>
-            </nav>
-
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
+            <!-- Menu Desktop -->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link">Início</a></li>
+                <li><a href="#filosofia" class="nav-link">Filosofia</a></li>
+                <li><a href="#atividades" class="nav-link">Atividades</a></li>
+                <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+            
+            <!-- Controles -->
+            <div class="navbar-controls">
+                <!-- Toggle Tema -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <!-- Menu Mobile -->
+                <button class="mobile-menu-btn" id="mobile-menu" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <section class="hero" id="home">
+    <!-- ===== HERO SECTION ===== -->
+    <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1>Sua próxima aventura começa aqui.</h1>
-            <p>Destinos exclusivos e experiências inesquecíveis ao redor do globo.</p>
-            <a href="#destinos" class="btn-main">Explorar Destinos</a>
+            <h1 class="hero-title">Sobreviva. Conheça-se. Transcenda.</h1>
+            <p class="hero-subtitle">Desenvolva seu instinto nômade e descubra seus verdadeiros limites</p>
+            <button class="btn btn-primary" id="cta-principal">Comece Sua Jornada</button>
+        </div>
+        <div class="hero-background">
+            <div class="pattern-overlay"></div>
         </div>
     </section>
 
-    <section class="destinos" id="destinos">
+    <!-- ===== SOBRE SEÇÃO ===== -->
+    <section id="sobre" class="sobre">
         <div class="container">
-            <h2 class="section-title">Destinos em Destaque</h2>
-            <div class="destinos-grid">
-                <div class="card">
-                    <div class="card-img" style="background-image: url('img/destino1.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Maldivas</h3>
-                        <p>Paraísos tropicais e águas cristalinas.</p>
-                        <a href="#" class="btn-card">Saiba Mais</a>
+            <h2 class="section-title">Sobre Instinto Nômade</h2>
+            <div class="sobre-content">
+                <p>
+                    Instinto Nômade é mais que uma experiência de aventura. É uma jornada de autoconhecimento 
+                    profundo que te prepara para qualquer situação, em qualquer lugar.
+                </p>
+                <p>
+                    Combinamos técnicas de rapel, montanhismo e survival com desenvolvimento psicológico, 
+                    ajudando você a identificar e superar seus limites físicos e emocionais.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FILOSOFIA SEÇÃO ===== -->
+    <section id="filosofia" class="filosofia">
+        <div class="container">
+            <h2 class="section-title">Nossa Filosofia</h2>
+            <div class="filosofia-grid">
+                
+                <div class="filosofia-card">
+                    <div class="card-icon">
+                        <i class="fas fa-mountain"></i>
                     </div>
+                    <h3>Resiliência</h3>
+                    <p>Capacidade de se adaptar, superar adversidades e emergir mais forte das dificuldades.</p>
                 </div>
-                <div class="card">
-                    <div class="card-img" style="background-image: url('img/destino2.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Paris</h3>
-                        <p>A cidade luz espera por você.</p>
-                        <a href="#" class="btn-card">Saiba Mais</a>
+
+                <div class="filosofia-card">
+                    <div class="card-icon">
+                        <i class="fas fa-brain"></i>
                     </div>
+                    <h3>Autoconhecimento</h3>
+                    <p>Identificar seus limites físicos e psicológicos, transformando vulnerabilidades em fortalezas.</p>
                 </div>
-                <div class="card">
-                    <div class="card-img" style="background-image: url('img/destino3.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Machu Picchu</h3>
-                        <p>História e aventura nos Andes.</p>
-                        <a href="#" class="btn-card">Saiba Mais</a>
+
+                <div class="filosofia-card">
+                    <div class="card-icon">
+                        <i class="fas fa-hand-fist"></i>
+                    </div>
+                    <h3>Domínio Técnico</h3>
+                    <p>Capacitação em técnicas essenciais para sobrevivência em ambientes desafiadores.</p>
+                </div>
+
+                <div class="filosofia-card">
+                    <div class="card-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Conexão com Natureza</h3>
+                    <p>Reencontro profundo com o ambiente natural e sua própria essência nômade.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ATIVIDADES SEÇÃO ===== -->
+    <section id="atividades" class="atividades">
+        <div class="container">
+            <h2 class="section-title">Nossas Atividades</h2>
+            <div class="atividades-grid">
+                
+                <div class="atividade-card">
+                    <div class="atividade-icon">
+                        <i class="fas fa-person-hiking"></i>
+                    </div>
+                    <h3>Rapel Vertical</h3>
+                    <p>
+                        Técnicas avançadas de descida em paredes rochosas. Supere o medo, domine a técnica, 
+                        reconheça seus limites com segurança.
+                    </p>
+                    <ul class="atividade-features">
+                        <li><i class="fas fa-check"></i> Iniciante a Avançado</li>
+                        <li><i class="fas fa-check"></i> Equipamento fornecido</li>
+                        <li><i class="fas fa-check"></i> Instrutores certificados</li>
+                    </ul>
+                </div>
+
+                <div class="atividade-card">
+                    <div class="atividade-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Montanhismo</h3>
+                    <p>
+                        Escalada de picos desafiadores. Trabalhe resistência, planejamento e resiliência 
+                        em altitudes extremas.
+                    </p>
+                    <ul class="atividade-features">
+                        <li><i class="fas fa-check"></i> Rotas variadas</li>
+                        <li><i class="fas fa-check"></i> Aclimatação progressiva</li>
+                        <li><i class="fas fa-check"></i> Suporte técnico completo</li>
+                    </ul>
+                </div>
+
+                <div class="atividade-card">
+                    <div class="atividade-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Survival Avançado</h3>
+                    <p>
+                        Técnicas de sobrevivência em ambientes selvagens. Aprenda a identificar recursos, 
+                        construir abrigo e manter-se seguro.
+                    </p>
+                    <ul class="atividade-features">
+                        <li><i class="fas fa-check"></i> Módulos especializados</li>
+                        <li><i class="fas fa-check"></i> Prática em campo real</li>
+                        <li><i class="fas fa-check"></i> Certificação reconhecida</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DEPOIMENTOS SEÇÃO ===== -->
+    <section id="depoimentos" class="depoimentos">
+        <div class="container">
+            <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+            <div class="depoimentos-grid">
+                
+                <div class="depoimento-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="depoimento-texto">
+                        "Instinto Nômade transformou meu entendimento sobre meus próprios limites. 
+                        Voltei do rapel com uma confiança que não tinha em mim mesmo."
+                    </p>
+                    <p class="depoimento-autor"><strong>— João Silva</strong> | Empresário</p>
+                </div>
+
+                <div class="depoimento-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="depoimento-texto">
+                        "A experiência de montanhismo foi desafiadora, mas exatamente o que eu precisava. 
+                        Aprendi mais sobre resiliência em 3 dias do que em meses de terapia."
+                    </p>
+                    <p class="depoimento-autor"><strong>— Maria Santos</strong> | Coach de Vida</p>
+                </div>
+
+                <div class="depoimento-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="depoimento-texto">
+                        "Profissionalismo, segurança e impacto transformador. 
+                        O programa de survival foi a melhor decisão de desenvolvimento pessoal que fiz."
+                    </p>
+                    <p class="depoimento-autor"><strong>— Carlos Mendes</strong> | Gestor de Projetos</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTATO SEÇÃO ===== -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Pronto Para o Desafio?</h2>
+            
+            <div class="contato-content">
+                <form class="contato-form" id="form-contato">
+                    <div class="form-group">
+                        <label for="nome">Seu Nome</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="atividade">Qual atividade te interessa?</label>
+                        <select id="atividade" name="atividade" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="rapel">Rapel Vertical</option>
+                            <option value="montanhismo">Montanhismo</option>
+                            <option value="survival">Survival Avançado</option>
+                            <option value="combo">Pacote Completo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem (Opcional)</label>
+                        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar Solicitação</button>
+                </form>
+
+                <div class="contato-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>Montanhas do Brasil</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contato@instintonômade.com.br</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horário</h4>
+                            <p>Seg-Sex: 08h - 18h</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Instinto Nômade</h4>
+                    <p>Desenvolvendo resiliência, autoconhecimento e sobrevivência.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#filosofia">Filosofia</a></li>
+                        <li><a href="#atividades">Atividades</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Instinto Nômade. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="js/script.js"></script>
 </body>
 </html>
