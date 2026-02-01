@@ -117,7 +117,7 @@ Botão de alternância está no **canto superior direito** da navbar com ícone 
 
 ---
 
-## 
+##
 
 ---
 
@@ -149,12 +149,12 @@ Botão de alternância está no **canto superior direito** da navbar com ícone 
 
 ## ⚡ Performance
 
-- ✅ CSS Variables para tema dinâmico
-- ✅ Intersection Observer para animações
-- ✅ LocalStorage para persistência
-- ✅ FontAwesome CDN (não necessário baixar localmente)
-- ✅ Sem JavaScript pesado ou dependências externas
-- ✅ Scroll behavior suave nativo
+-  CSS Variables para tema dinâmico
+-  Intersection Observer para animações
+-  LocalStorage para persistência
+-  FontAwesome CDN (não necessário baixar localmente)
+-  Sem JavaScript pesado ou dependências externas
+-  Scroll behavior suave nativo
 
 ---
 
@@ -169,11 +169,11 @@ Botão de alternância está no **canto superior direito** da navbar com ícone 
 
 ## 🛠️ Próximas Melhorias Sugeridas
 
-- [ ] Adicionar imagens profissionais na pasta `/img`
+- [ ] Adicionar imagens 
 - [ ] Integrar backend para formulário de contato
 - [ ] Animações parallax no hero
 - [ ] Gallery/Portfólio de experiências
-- [ ] Blog de dicas de survival
+- [ ] Blog de dicas de sobrevivebcia
 - [ ] Agendamento online
 - [ ] Integração com redes sociais
 
@@ -187,10 +187,10 @@ Criado para **Instinto Nômade** © 2026
 
 ## 📞 Contato & Suporte
 
-**Email**: contato@instintonômade.com.br  
+**Email**: contato@???????????.com  
 **Telefone**: (11) 99999-9999  
-**Localização**: Montanhas do Brasil
+**Localização**: ??????/Brasil/
 
 ---
 
-**Desenvolvido com ❤️ para aventureiros** 🏔️
+**Desenvolvido com cuidado e atenção para Instinto Nômade** 🏔️
